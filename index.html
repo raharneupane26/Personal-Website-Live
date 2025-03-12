@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rahar Neupane</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
+    <!-- main style -->
+    <link href="css/style.css" rel="stylesheet">
+  
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">
+
+            <div class="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
+            </div>
+
+        </div>
+    </div>
+    <!-- ./Preloader -->
+    
+    <!-- header -->
+    <header class="navbar-fixed-top">
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">experience</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ./header -->
+    
+    <!-- home -->
+    <div class="section" id="home" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="disply-table">
+                <div class="table-cell" data-aos="fade-up" data-aos-delay="0">
+                    <h4 id="name"></h4>
+                    <h1 id="title"></h1>
+                    <h2 id="extra"></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function typeEffect(element, text, speed, callback) {
+            let i = 0;
+            document.getElementById(element).innerHTML = ""; // Clear before typing
+    
+            function typing() {
+                if (i < text.length) {
+                    document.getElementById(element).innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typing, speed);
+                } else if (callback) {
+                    callback(); // Call next step
+                }
+            }
+            typing();
+        }
+    
+        function startTypingLoop() {
+            const texts = [
+                { id: "name", text: "Rahar Neupane" },
+                { id: "title", text: "Biotechnologist" },
+                { id: "extra", text: "and lot more.." }
+            ];
+    
+            let completed = 0;
+    
+            texts.forEach(({ id, text }) => {
+                typeEffect(id, text, 100, () => {
+                    completed++;
+                    if (completed === texts.length) {
+                        setTimeout(startTypingLoop, 2000); // Restart after all finish
+                    }
+                });
+            });
+        }
+    
+        startTypingLoop();
+    </script>
+    
+    
+    <!-- ./home -->
+    
+    <!-- about -->
+    <div class="section" id="about">
+        <div class="container">
+            <div class="col-md-6" data-aos="fade-up">
+                <h4>01</h4>
+                <h1 class="size-50">Know <br /> About me</h1>
+                <div class="h-50"></div>
+                <p style="text-align: justify;">Hi, I am Rahar Neupane, a driven and results-oriented professional with a strong foundation in biotechnology, finance, and event management. Passionate about innovation and problem-solving, I thrive in environments that require analytical thinking, leadership, and cross-functional collaboration to drive meaningful progress.</p>
+                <p style="text-align: justify;">With experience in financial management, strategic planning, and large-scale projects, I integrate scientific knowledge with organizational strategy to create sustainable solutions. I focus on partnership development, operational efficiency, and technology-driven innovation to tackle challenges and drive impact.</p>
+                <p style="text-align: justify;">Committed to continuous learning and excellence, I seek to bridge science, leadership, and strategic execution to foster long-term progress and community empowerment.</p>
+                <div class="h-50"></div>
+            </div>
+            <div class="col-md-6 about-img-div">
+                <div class="about-border" data-aos="fade-up" data-aos-delay=".5"></div>
+                <img src="img/about-img.jpg" width="400" class="img-responsive" alt="" align="right" data-aos="fade-right" data-aos-delay="0" />
+            </div>
+        </div>
+    </div>
+    <!-- ./about -->
+    
+    <!-- experience  -->
+   <div class="section" id="experience">
+    <div class="container">
+        <div class="col-md-12">
+            <h4>02</h4>
+            <h1 class="size-50">My <br /> Experience</h1>
+            <div class="h-50"></div>
+        </div>
+                    <!-- Add the CV Button -->
+                    <div class="cv-button-container">
+                        <a href="Rahar CV.pdf" class="cv-button" data-aos="fade-up">
+                            <button class="btn btn-primary">Download My CV</button>
+                        </a>
+                    </div>
+                    <br>
+
+        <div class="col-md-12">
+            <ul class="timeline">
+                <li class="timeline-event" data-aos="fade-up">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">March 2024 – Present</p>
+                        <h3>Licensee/Lead Organizer</h3>
+                        <h4>TEDx Kathmandu University</h4>
+                        <p>Leading the planning and preparation for TEDxKathmanduUniversity, coordinating cross-functional teams to ensure a successful and impactful event. Strategizing to maximize audience engagement and community involvement.</p>
+                    </div>
+                </li>
+                <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">July 2024 – Present</p>
+                        <h3>Country Head Finance and Legalities</h3>
+                        <h4>AIESEC in Nepal</h4>
+                        <p>Leading the financial and legal operations for AIESEC in Nepal. Implementing financial strategies and ensuring compliance with legal frameworks. Overseeing budgeting, financial planning, and reporting to ensure transparency and accountability.</p>
+                    </div>
+                </li>
+                <li class="timeline-event" data-aos="fade-up" data-aos-delay=".4">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">May 2024 – Present</p>
+                        <h3>Coordinator, Bio-Hackathon</h3>
+                        <h4>Kathmandu University Biotechnology Creatives (KUBiC)</h4>
+                        <p>Coordinating and managing the Bio-Hackathon event, focusing on strategic planning and execution. Leading a team to deliver a successful event with a focus on innovation and biotechnology.</p>
+                    </div>
+                </li>
+                <li class="timeline-event" data-aos="fade-up" data-aos-delay=".6">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">October 2023 – April 2024</p>
+                        <h3>Head of Finance</h3>
+                        <h4>Asia Pacific Summit 2024, AIESEC</h4>
+                        <p>Managed financial operations, including budgeting and reporting for the summit. Ensured transparency and accountability in financial matters.</p>
+                    </div>
+                </li>
+                <li class="timeline-event" data-aos="fade-up" data-aos-delay=".8">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">March 2023 – September 2023</p>
+                        <h3>Head of Operations and Management</h3>
+                        <h4>TEDxKathmanduUniversity, Dhulikhel, Nepal</h4>
+                        <p>Led event logistics to ensure seamless execution of TEDx events. Coordinated cross-functional teams for successful outcomes.</p>
+                    </div>
+                </li>
+                <li class="timeline-event" data-aos="fade-up">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">September 2022 – March 2023</p>
+                        <h3>Sponsorship and Partnership Manager</h3>
+                        <h4>Hult Prize at Kathmandu University, Nepal</h4>
+                        <p>Spearheaded sponsorship and partnership initiatives for the Hult Prize. Negotiated and secured agreements with potential sponsors and partners.</p>
+                    </div>
+                </li>
+                <li class="timeline-event" data-aos="fade-up" data-aos-delay=".2">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">June 2022 – September 2022</p>
+                        <h3>Website Developer and Graphics Designer</h3>
+                        <h4>Biotechnology Meet 2022, Kathmandu University Biotechnology Creatives (KUBiC)</h4>
+                        <p>Developed and managed the website for Biotechnology Meet 2022. Optimized user experience and provided real-time event updates.</p>
+                    </div>
+                </li>
+                <li class="timeline-event" data-aos="fade-up" data-aos-delay=".4">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">June 2023 – September 2023</p>
+                        <h3>Executive Body Coordinator</h3>
+                        <h4>Youth Speak Forum 2023, AIESEC in Nepal</h4>
+                        <p>Coordinated with the executive team to plan and execute the forum. Played a key role in decision-making and overseeing the forum’s overall execution.</p>
+                    </div>
+                </li>
+                <li class="timeline-event" data-aos="fade-up" data-aos-delay=".6">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">January 2022 – December 2022</p>
+                        <h3>Graphic Designer</h3>
+                        <h4>HEREDITY GEN II Magazine, Kathmandu University Biotechnology Creatives (KUBiC), Nepal</h4>
+                        <p>Designed visually engaging layouts and graphics for the magazine. Ensured consistency in the visual identity and aesthetic appeal.</p>
+                    </div>
+                </li>
+                <li class="timeline-event" data-aos="fade-up" data-aos-delay=".8">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">August 2021 – July 2022</p>
+                        <h3>Branding Manager</h3>
+                        <h4>AIESEC in Kathmandu University, Nepal</h4>
+                        <p>Supported upper management in identifying and pursuing new business opportunities. Cultivated partnerships and collaborations to drive growth.</p>
+                    </div>
+                </li>
+                <li class="timeline-event" data-aos="fade-up" data-aos-delay="1.0">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">May 2022 – August 2022</p>
+                        <h3>Website Developer, Graphic Designer, and Technical Lead</h3>
+                        <h4>Bio-Hackathon 2022, Kathmandu University Biotechnology Creatives (KUBiC), Nepal</h4>
+                        <p>Developed and managed the official website for the Bio-Hackathon event. Designed all visual content, including logos, banners, and promotional materials. Led the technical setup and support for the event, ensuring all technical systems operated smoothly.</p>
+                    </div>
+                </li>
+                <li class="timeline-event" data-aos="fade-up" data-aos-delay="1.2">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">August 2021 – July 2022</p>
+                        <h3>Club Service Avenue Associate</h3>
+                        <h4>Rotaract Club of Kathmandu University</h4>
+                        <p>Facilitated service projects and community outreach initiatives. Coordinated with club members to organize and implement various service activities.</p>
+                    </div>
+                </li>
+                <li class="timeline-event" data-aos="fade-up" data-aos-delay="1.4">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">October 2022 – December 2022</p>
+                        <h3>Head of Finance and Logistics</h3>
+                        <h4>National Leadership Summit 2022, AIESEC in Nepal</h4>
+                        <p>Managed the budgeting, financial planning, and logistics for the summit. Ensured all necessary financial resources and logistical requirements were met efficiently.</p>
+                    </div>
+                </li>
+                <li class="timeline-event" data-aos="fade-up" data-aos-delay="1.6">
+                    <label class="timeline-event-icon"></label>
+                    <div class="timeline-event-copy">
+                        <p class="timeline-event-thumbnail">August 2022 – August 2022</p>
+                        <h3>Head of Logistics</h3>
+                        <h4>Youth Speak Forum 2022, AIESEC in Nepal</h4>
+                        <p>Oversaw all logistics operations for the Youth Speak Forum. Ensured the seamless execution of the event by managing venue arrangements, transportation, and material distribution.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <!-- ./experience -->
+    
+    <!-- projects -->
+    <div class="section" id="projects">
+        <div class="container">
+            <div class="col-md-12">
+                <h4>03</h4>
+                <h1 class="size-50">My <br /> Projects</h1> 
+            </div>
+            <div class="main-container portfolio-inner clearfix">
+                <div class="portfolio-div">
+                    <div class="portfolio">
+                        <div class="categories-grid wow fadeInLeft">
+                            <nav class="categories">
+                                <ul class="portfolio_filter">
+                                    <li><a href="" class="active" data-filter="*">All</a></li>
+                                    <li><a href="" data-filter=".research">Research Projects</a></li>
+                                    <li><a href="" data-filter=".external">External Projects</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="no-padding portfolio_container clearfix" data-aos="fade-up">
+                            <div class="col-md-4 col-sm-6 research">
+                                <a id="demo01" href="#animatedModal" class="portfolio_item"> <img src="img/portfolio/01.jpg" alt="image" class="img-responsive" />
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>Assessment of Physicochemical Quality of Water</span> <em>A Case Study in Dhulikhel Municipality, 2023</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-sm-6 research">
+                                <a id="demo02" href="#animatedModal" class="portfolio_item"> <img src="img/portfolio/02.jpg" alt="image" class="img-responsive" />
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>Ancestral Genetic Diversity of Nepalese Ethnic Groups</span> <em>Analyzing Autosomal, Mitochondrial, and Y-DNA Haplogroups, 2024</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-4 col-sm-6 external">
+                                <a id="demo03" href="#animatedModal" class="portfolio_item"> <img src="img/portfolio/03.jpg" alt="image" class="img-responsive" />
+                                    <div class="portfolio_item_hover">
+                                        <div class="portfolio-border clearfix">
+                                            <div class="item_info"> <span>Project AGHNI</span> <em>Millennium Fellowship, 2022</em> </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ./projects -->
+    
+    <!-- contact -->
+    <div class="section" id="contact">
+        <div class="container">
+            <div class="col-md-12">
+                <h4>04</h4>
+                <h1 class="size-50">Contact  Me</h1>
+                <div class="h-50"></div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up">
+
+                <h3>Phone Number</h3>
+                <p>+977 071 526158</p>
+                <h3> Mobile Number</h3>
+                <p>+977 9867224444</p>
+                <h3>Email</h3>
+                <p>mr.raharneupane@gmail.com </p>
+
+                <h3>Social Network</h3>
+
+                <ul class="social">
+                    <li><a href="https://www.linkedin.com/in/rahar-neupane-09853b1a7/"><i class="ion-social-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/raharneupane26/"><i class="ion-social-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/rahar_neupane/"><i class="ion-social-instagram"></i></a></li>
+                    <li><a href="https://github.com/raharneupane26"><i class="ion-social-github"></i></a></li>
+                </ul>
+                <div class="clearfix"></div>
+                <div class="h-50"></div>
+            </div>
+            <div class="col-md-8" data-aos="fade-up">
+                <form class="contact-bg" id="contact-form" name="contact" method="post" novalidate="novalidate">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" />
+                    <input type="email" name="email" class="form-control" placeholder="Your E-mail" />
+                    <input type="text" name="phone" class="form-control" placeholder="Phone Number" />
+                    <textarea name="message" class="form-control" placeholder="Your Message" style="height:120px"></textarea>
+                    <button id="submit" type="submit" name="submit" class="btn btn-glance">Send</button>
+                    <div id="success">
+                        <p class="green textcenter"> Your message was sent successfully! I will be in touch as soon as I can. </p>
+                    </div>
+                    <div id="error">
+                        <p> Something went wrong, try refreshing and submitting the form again. </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ./contact -->
+
+    <!--DEMO01-->
+    <div id="animatedModal" class="popup-modal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+        <div id="btn-close-modal" class="close-animatedModal close-popup-modal"> <i class="ion-close-round"></i> </div>
+        <div class="clearfix"></div>
+        <div class="modal-content">
+            <div class="container">
+                <div class="portfolio-padding">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2>Geschäfts Eines<br /> Web-Studios</h2>
+                        <div class="h-50"></div>
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value. Quickly promote premium strategic theme areas vis-a-vis.</p>
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value.</p>
+                        <br />
+                        <br /> <img src="img/portfolio/02.jpg" alt="" class="img-responsive" />
+                        <br />
+                        <br />
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value. Quickly promote premium strategic theme areas vis-a-vis.</p>
+                        <p>Appropriately maintain standards compliant total linkage with cutting-edge action items. Enthusiastically create seamless synergy rather than excellent value.</p>
+                        <br />
+                        <br /> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!--  plugins  -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+
+    <!--  main script  -->
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
